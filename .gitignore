@@ -1,0 +1,4 @@
+impl/
+**/tests/*.vcd
+**/tests/out
+**/*.gprj*

@@ -1,0 +1,6 @@
+#! /bin/bash
+
+set -e
+
+iverilog -o out -c inputs.txt
+vvp out
