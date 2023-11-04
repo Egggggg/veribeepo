@@ -18,7 +18,6 @@ module test;
     */
 
     initial begin
-        $dumpfile("blink.vcd");
         $dumpvars(0, i_enable, r_led_drive);
         $dumpvars(0, boye.r_toggle_fast, boye.r_toggle_slow, boye.r_led_select, boye.r_led_drive, boye.o_led_drive);
     end
