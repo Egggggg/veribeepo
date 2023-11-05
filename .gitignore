@@ -2,3 +2,4 @@ impl/
 **/tests/*.vcd
 **/tests/out
 **/*.gprj*
+**/gowin*
