@@ -2,7 +2,7 @@
 module multi7 #(
     parameter DIGITS = 4,
     parameter FREQ = 27_000_000,
-    parameter DELAY_US = 1000,
+    parameter DELAY_US = 5000,
     parameter integer DELAY = FREQ * (DELAY_US / 1_000_000.0)
 ) (
     i_clk,
@@ -27,13 +27,6 @@ module multi7 #(
     localparam d_d = 7'b0111101;
     localparam d_e = 7'b1001111;
     localparam d_f = 7'b1000111;
-
-    localparam d_n0 = 7'b0010101;
-    localparam d_r1 = 7'b0000101;
-    localparam d_o2 = 7'b0011101;
-    localparam d_l3 = 7'b0001110;
-    localparam d__4 = 7'b0000000;
-    localparam gup = 12;
 
     input i_clk;
 
@@ -79,16 +72,11 @@ module multi7 #(
 
             always @(i_digits[(TOP):(BOTTOM)]) begin
                 case (i_digits[(TOP):(BOTTOM)])
-                    4'h0: r_displays_state[G:A] <= d_n0;
-                    // 4'h0: r_displays_state[G:A] <= d_0;
-                    4'h1: r_displays_state[G:A] <= d_r1;
-                    // 4'h1: r_displays_state[G:A] <= d_1;
-                    4'h2: r_displays_state[G:A] <= d_o2;
-                    // 4'h2: r_displays_state[G:A] <= d_2;
-                    4'h3: r_displays_state[G:A] <= d_l3;
-                    // 4'h3: r_displays_state[G:A] <= d_3;
-                    4'h4: r_displays_state[G:A] <= d__4;
-                    // 4'h4: r_displays_state[G:A] <= d_4;
+                    4'h0: r_displays_state[G:A] <= d_0;
+                    4'h1: r_displays_state[G:A] <= d_1;
+                    4'h2: r_displays_state[G:A] <= d_2;
+                    4'h3: r_displays_state[G:A] <= d_3;
+                    4'h4: r_displays_state[G:A] <= d_4;
                     4'h5: r_displays_state[G:A] <= d_5;
                     4'h6: r_displays_state[G:A] <= d_6;
                     4'h7: r_displays_state[G:A] <= d_7;

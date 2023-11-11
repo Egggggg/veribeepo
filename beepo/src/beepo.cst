@@ -5,7 +5,7 @@
 //Part Number: GW2AR-LV18QN88C8/I7
 //Device: GW2AR-18
 //Device Version: C
-//Created Time: Fri 11 10 12:47:44 2023
+//Created Time: Fri 11 10 19:46:44 2023
 
 IO_LOC "o_displays_neg[3]" 80;
 IO_PORT "o_displays_neg[3]" PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
@@ -29,5 +29,9 @@ IO_LOC "o_segments_drive[1]" 18;
 IO_PORT "o_segments_drive[1]" PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
 IO_LOC "o_segments_drive[0]" 72;
 IO_PORT "o_segments_drive[0]" PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "i_button_dec" 87;
+IO_PORT "i_button_dec" PULL_MODE=UP BANK_VCCIO=1.8;
+IO_LOC "i_button_inc" 88;
+IO_PORT "i_button_inc" PULL_MODE=UP BANK_VCCIO=1.8;
 IO_LOC "i_clk" 4;
 IO_PORT "i_clk" PULL_MODE=UP BANK_VCCIO=1.8;
